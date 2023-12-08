@@ -18,6 +18,7 @@ class Showdata extends Action
 
     public function execute()
     {
+	// gen page and add title
         $resultPage = $this->resultPageFactory->create();
         $resultPage->getConfig()->getTitle()->prepend(__('Reviews'));
 
