@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Page_Reviews::page" title="Customer Reviews" module="Page_Reviews" sortOrder="30" resource="Page_Reviews::page"/>
+        <add id="Page_Reviews::reviews" title="Manage Reviews" module="Page_Reviews" sortOrder="10" action="page/reviews" resource="Page_Reviews::reviews" parent="Page_Reviews::page"/>
+    </menu>
+</config> 

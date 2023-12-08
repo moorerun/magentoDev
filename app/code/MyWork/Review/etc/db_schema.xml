@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+        <table name="tb_customer_reviews">
+            <column xsi:type="int" name="review_id" padding="10" unsigned="true" identity="true" nullable="false" comment="Review Id"/>
+            <column xsi:type="varchar" name="email" nullable="false" length="255" comment="Customer Email"/>
+            <column xsi:type="varchar" name="name" nullable="false" length="255" comment="Customer Name"/>
+            <column xsi:type="text" name="review" nullable="false" comment="Review"/>
+            <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP" comment="Created At"/>
+            <column xsi:type="timestamp" name="updated_at" on_update="true" nullable="false" default="CURRENT_TIMESTAMP"
+                comment="Block Modification Time"/>
+            <constraint xsi:type="primary" referenceId="PRIMARY">
+                <column name="review_id"/>
+            </constraint>
+        </table>
+</schema>

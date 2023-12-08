@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+            	<!-- Data Source will be mentioned in listing xml -->
+                <item name="page_reviews_listing_data_source" xsi:type="string">Page\Reviews\Model\ResourceModel\Post\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Page\Reviews\Model\ResourceModel\Post\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+        	<!-- Table name to insert data and listing data -->
+            <argument name="mainTable" xsi:type="string">page_reviews_post</argument>
+            <!-- Resource model name -->
+            <argument name="resourceModel" xsi:type="string">Page\Reviews\Model\ResourceModel\Post</argument>
+        </arguments>
+    </virtualType>
+</config>

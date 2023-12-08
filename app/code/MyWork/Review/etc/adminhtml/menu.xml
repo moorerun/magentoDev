@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="MyWork_Review::module_review" title="Customer Reviews" module="MyWork_Review" sortOrder="10" resource="MyWork_Review::module_review"/>
+        <add id="MyWork_Review::review" title="Manage Reviews" module="MyWork_Review" parent="MyWork_Review::module_review" sortOrder="10" action="review/index/index" resource="MyWork_Review::review"/>
+    </menu>
+</config>
