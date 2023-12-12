@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+    <route url="/V1/Customer/reviews" method="GET"> 
+        <service class="Customer\Review\Api\ReviewInterface" method="getReviews"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/Customer/reviews" method="POST">
+        <service class="Customer\Review\Api\ReviewInterface" method="createReview"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/Customer/reviews" method="PUT">
+        <service class="Customer\Review\Api\ReviewInterface" method="updateReview"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>

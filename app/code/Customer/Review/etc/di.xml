@@ -2,6 +2,7 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <preference for="Customer\Review\Api\Data\GridInterface" type="Customer\Review\Model\Grid" />
+    <preference for="Customer\Review\Api\ReviewInterface" type="Customer\Review\Model\Api\Review"/>
 
     <virtualType name="Customer\Review\Model\ResourceModel\Grid\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
         <arguments>
